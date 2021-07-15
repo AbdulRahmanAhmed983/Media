@@ -2,18 +2,12 @@
 
 class conn {
     protected static function connection() {
-        // $server = 'localhost';
-        // $database = 'social';
-        // $user = 'root';
-        // $password = '';
+        $server = 'us-cdbr-east-04.cleardb.com';
+        $database = 'heroku_8af2c11ccf2d678';
+        $user = 'b19c2ceb99c96b';
+        $password = '9cd528c5';
 
-        // $conn = mysqli_connect($server,$user,$password,$database);
-        $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $cleardb_server = $cleardb_url["host"];
-        $cleardb_username = $cleardb_url["user"];
-        $cleardb_password = $cleardb_url["pass"];
-        $cleardb_db = substr($cleardb_url["path"],1);
-        $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+        $conn = mysqli_connect($server,$user,$password,$database);
 
         if($conn->connect_error) {
             die('error:' . $conn->connect_error);
