@@ -2,11 +2,13 @@
 
 class HomeController {
     public static function index() {
-        if(session_status() == PHP_SESSION_NONE) {
-            header('location:/login');
+        print_r(session_status());
+        if(session::get('name')) {
+            template::view('Dashboard');
+           
 
         } else {
-            template::view('Dashboard');
+            header('location:/login');
         }
     }
 }

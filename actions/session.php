@@ -17,7 +17,7 @@ class session {
         if(!empty($_SESSION[$request])) {
             return $_SESSION[$request];
         } else {
-            return 'not set';
+            return false;
         }
     }
 }
