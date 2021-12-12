@@ -2,6 +2,9 @@
 template::Controller('HomeController');
 template::Controller('RegisterController');
 template::Controller('errorController');
+template::Controller('EditController');
+
+
 
 
 class Router {
@@ -27,12 +30,7 @@ class Router {
         $method = $this->routes[$this->getMethod()][$this->getPath()] ?? 'error@e404';
         $exp = explode('@',$method);
         $callback = call_user_func_array([new $exp[0],$exp[1]],[]);
-        echo '<pre>';
-        print_r($this->getMethod());
-        print_r($this->getPath());
-        print_r($this->routes[$this->getMethod()]);
-        print_r($callback);
-       echo '</pre>';
+     
         return $callback;
     }
 }

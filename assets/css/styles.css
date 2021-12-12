@@ -20,7 +20,7 @@
 body {
     background: var(--black);
     font-family: 'Poppins', sans-serif;
-    height: 1000;
+    height: 100;
     overflow-x: hidden;
 }
 /* general */
@@ -722,10 +722,9 @@ aside ion-icon {
 
 /* login screen */
 
-.rowlogin{
+.f1{
     background-color: #1a1f24;
-    height: 400px;
-    width: 400px;
+    height: 250px;
     border: 1px solid white;
     border-radius: 10px;
 }

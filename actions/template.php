@@ -3,7 +3,9 @@ class template {
     public static function setaction($file) {
        return include realpath("actions/$file.php");
     } 
-    public static function view($file) {
+    public static function view($file,$array = []) {
+      
+        $arr = $array;
         return include(realpath("views/$file.php"));
     }
     public static function Controller($controller) {

@@ -2,10 +2,10 @@
 
 class conn {
     protected static function connection() {
-        $server = 'us-cdbr-east-04.cleardb.com';
-        $database = 'heroku_8af2c11ccf2d678';
-        $user = 'b19c2ceb99c96b';
-        $password = '9cd528c5';
+        $server = 'localhost';
+        $database = 'social';
+        $user = 'root';
+        $password = '';
 
         $conn = mysqli_connect($server,$user,$password,$database);
 

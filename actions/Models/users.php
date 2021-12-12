@@ -4,6 +4,7 @@ class users {
     static function create($email,$username,$password) {
        $password = password_hash($password,PASSWORD_BCRYPT);
        conn::query("insert into users(`userName`,`email`,`password`) values('$username','$email','$password')",false);
+       print_r($email);
     }
     static function read($email,$password) {
        $user = conn::query("select * from users where email='$email'",true);
